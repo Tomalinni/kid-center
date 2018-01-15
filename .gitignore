@@ -1,0 +1,16 @@
+**/.DS_Store
+.idea/
+*.iml
+*.ipr
+.gradle/
+target/
+**/dist/
+**/dist-rev/
+**/node_modules/
+**/bower_components/
+
+data/
+build/
+sh/service/
+
+**/resources/application-*.properties

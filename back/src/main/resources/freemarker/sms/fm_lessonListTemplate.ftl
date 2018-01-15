@@ -1,0 +1,1 @@
+<#list notification.days?values as day>${day.month}月${day.monthDay}日（${day.weekDay}）<#list day.lessons as lesson>${lesson.time}的${lesson.subject}课，</#list></#list>

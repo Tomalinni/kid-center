@@ -1,0 +1,10 @@
+{
+  "env": {
+    "dev": {
+      "presets": ["react"]
+    },
+    "prod": {
+      "presets": ["react", "es2015"]
+    }
+  }
+}

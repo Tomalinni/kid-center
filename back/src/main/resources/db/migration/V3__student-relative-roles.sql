@@ -1,0 +1,24 @@
+select setval('public.student_relative_role_seq', 1);
+
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '父亲');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '母亲');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '爷爷');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '奶奶');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '外公');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '外婆');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '姑妈');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '姑丈');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '姨妈');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '姨丈');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '叔叔');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '婶婶');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '舅舅');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '舅妈');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '表哥');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '表姐');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '表妹');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '表嫂');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '堂哥');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '堂姐');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '堂妹');
+insert into public.studentrelativerole (id, name) values (nextval('public.student_relative_role_seq'), '保姆');

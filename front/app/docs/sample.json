@@ -1,0 +1,121 @@
+{
+  "73": {
+    "id": 73,
+    "name": "C1",
+    "level": 0,
+    "hasTargetMonth": false,
+    "parent": null,
+    "children": [
+      {
+        "id": 74
+      },
+      {
+        "id": 76
+      },
+      {
+        "id": 78
+      }
+    ]
+  },
+  "74": {
+    "id": 74,
+    "name": "C11",
+    "level": 1,
+    "hasTargetMonth": false,
+    "parent": {
+      "id": 73
+    },
+    "children": [
+      {
+        "id": 75
+      }
+    ]
+  },
+  "75": {
+    "id": 75,
+    "name": "C111",
+    "level": 2,
+    "hasTargetMonth": false,
+    "parent": {
+      "id": 74
+    },
+    "children": []
+  },
+  "76": {
+    "id": 76,
+    "name": "C12",
+    "level": 1,
+    "hasTargetMonth": false,
+    "parent": {
+      "id": 73
+    },
+    "children": [
+      {
+        "id": 79
+      }
+    ]
+  },
+  "77": {
+    "id": 77,
+    "name": "C2",
+    "level": 0,
+    "hasTargetMonth": false,
+    "parent": null,
+    "children": [
+      {
+        "id": 81
+      },
+      {
+        "id": 82
+      }
+    ]
+  },
+  "78": {
+    "id": 78,
+    "name": "C13",
+    "level": 1,
+    "hasTargetMonth": false,
+    "parent": {
+      "id": 73
+    },
+    "children": []
+  },
+  "79": {
+    "id": 79,
+    "name": "Ð¡121",
+    "level": 2,
+    "hasTargetMonth": false,
+    "parent": {
+      "id": 76
+    },
+    "children": []
+  },
+  "80": {
+    "id": 80,
+    "name": "C3",
+    "level": 0,
+    "hasTargetMonth": false,
+    "parent": null,
+    "children": []
+  },
+  "81": {
+    "id": 81,
+    "name": "C21",
+    "level": 1,
+    "hasTargetMonth": false,
+    "parent": {
+      "id": 77
+    },
+    "children": []
+  },
+  "82": {
+    "id": 82,
+    "name": "C22",
+    "level": 1,
+    "hasTargetMonth": false,
+    "parent": {
+      "id": 77
+    },
+    "children": []
+  }
+}

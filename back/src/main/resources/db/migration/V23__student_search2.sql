@@ -1,0 +1,6 @@
+ALTER TABLE student
+  ADD COLUMN mobile_confirmed BOOLEAN NOT NULL DEFAULT FALSE;
+ALTER TABLE student
+  DROP COLUMN advisedby;
+ALTER TABLE student
+  DROP COLUMN istrial;

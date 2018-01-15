@@ -1,0 +1,65 @@
+server { #server for control subdomain (access for school staff and admin)
+	listen 80;
+
+	server_name school.annasalenko.cn;
+	root /usr/share/nginx/html/school;
+	index index.html index.htm;
+	client_max_body_size 25m;
+
+	location /data/ {
+        	proxy_pass http://localhost:8080/data/;
+    	}
+
+	location ~ /(bower_components|scripts|styles|images|favicon.ico|robots.txt) {
+     	   try_files $uri =404;
+	   expires max;
+   	}
+
+	location / {
+		try_files $uri /index.html;
+	}
+
+	#error_page 404 /404.html;
+}
+
+server {
+    # Enforce the use of HTTPS and redirect www sub to root
+    listen 80;
+    server_name localhost annasalenko.cn www.annasalenko.cn;
+    return 301 https://example.com$request_uri;
+}
+
+server { #server for no subdomain (public access to school data for parents)
+	listen 443 ssl;
+	server_name localhost annasalenko.cn www.annasalenko.cn;
+
+	ssl_certificate /etc/letsencrypt/live/annasalenko.cn/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/annasalenko.cn/privkey.pem; # managed by Certbot
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers  "HIGH:!RC4:!aNULL:!MD5:!kEDH";
+    add_header Strict-Transport-Security 'max-age=604800';
+
+	root /usr/share/nginx/html/control;
+	index index.html index.htm;
+	client_max_body_size 25m;
+	keepalive_timeout   60;
+
+	location /data/ {
+       proxy_pass http://localhost:8080/data/;
+    }
+
+	location ~ /(bower_components|scripts|styles|images|favicon.ico|robots.txt) {
+       try_files $uri =404;
+	   expires max;
+   	}
+
+	location / {
+		try_files $uri /index.html;
+	}
+
+	location ~ /.well-known {
+        allow all;
+    }
+
+	#error_page 404 /404.html;
+}

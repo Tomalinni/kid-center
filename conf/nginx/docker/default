@@ -1,0 +1,21 @@
+server { #server for control subdomain (access for school staff and admin)
+	listen 80;
+
+	server_name control.annasalenko.cn;
+	root /usr/share/nginx/html;
+	index index.html index.htm;
+	client_max_body_size 25m;
+
+	location /data/ {
+        	proxy_pass http://localhost:8080/data/;
+    	}
+
+	location ~ /(bower_components|scripts|styles|images|favicon.ico|robots.txt) {
+     	   try_files $uri =404;
+	   expires max;
+   	}
+
+	location / {
+		try_files $uri /index.html;
+	}
+}

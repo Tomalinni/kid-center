@@ -1,0 +1,20 @@
+ALTER TABLE student
+  ADD COLUMN planned_lessons_count INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE student
+  ADD COLUMN visited_lessons_count INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE student
+  ADD COLUMN paid_lessons_count INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE student
+  ADD COLUMN bonus_lessons_count INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE student
+  ADD COLUMN used_lessons_count INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE student
+  ADD COLUMN avl_lessons_count INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE student
+  ADD COLUMN last_card_valid_date DATE;
+
+ALTER TABLE studentcard
+  ADD COLUMN card_id BIGINT;
+
+ALTER TABLE card
+  ADD COLUMN sold_count INTEGER NOT NULL DEFAULT 0;
